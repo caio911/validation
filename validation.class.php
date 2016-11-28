@@ -196,3 +196,25 @@ class Validation
 
 }
 
+
+  $validate = new Validation;
+  $validate->rulesValidate(
+      array(
+          array($_POST['razaosocial']             , 'notnull'         , 'O campo Razão Social é obrigatório.'),
+          array($_POST['celular']                 , 'isnumber'         , 'O campo Celular é obrigatório.'),
+          array($_POST['email']                   , 'ismail'          , 'O campo E-mail é obrigatório.'),
+          array($_POST['mensagem']                , 'notnull'          , 'O campo Mensagem é obrigatório.')
+      )
+  );  
+
+  if($validate == 'success'){
+    return true;
+  }else{
+      $retorno = array (
+          'result' => 'error',
+          'msg' => $validate
+      );
+  }
+
+  echo json_encode($retorno);
+
