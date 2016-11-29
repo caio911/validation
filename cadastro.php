@@ -1,6 +1,6 @@
 <?php
 
-  // Chamando a Class de Validaçãop
+  // Chamando a Class de Validação
   require_once('validation.class.php');
   $validate = new Validation;
 
