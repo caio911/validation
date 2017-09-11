@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 
 
-	//SALVAR FALE CONOSCO POST AJAX
 	$(".btn-default").click(function(){
 
 		var currentButton = $(this);
